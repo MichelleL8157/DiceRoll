@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style></style>
+        <script>
+            function roll2Dice() {
+                total = 0;
+                sequence = "Num: "
+                for (var i = 0; i < 2; i++) {
+                    num = Math.round((Math.random() * 5) + 1);
+                    total += num;
+                    sequence += num + " ";
+                }
+                output.innerHTML = sequence + "Total: " + total;
+            }
+            function initialize() {
+                outputDiv = document.getElementById("divout");
+            }
+        </script>
+    </head>
+    <body onload = "initialize();">
+        <div id = "output"></div>
+        <hr />
+        <button onclick = "roll2Dice()">Roll 2 Dice</button>
+    </body>
+</html>
